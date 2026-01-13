@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Fredoka } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import '../styles/globals.css';
 import { site } from '@/content/site';
 import { Toast, AnalyticsHost } from '@/components';
 import { env } from '../../env';
 
-const fredoka = Fredoka({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-fredoka',
+  variable: '--font-manrope',
 });
 
 export const metadata: Metadata = {
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     template: `%s | ${site.app.name}`,
   },
   description:
-    'Upload a dating chat or profile and get AI-powered reply suggestions in the tone you want. Keep conversations engaging and confident.',
+    'Upload two parent photos, set influence and gender, and generate a realistic baby portrait saved to your Baby Room.',
   keywords: [
-    'dating assistant',
-    'AI dating',
-    'reply suggestions',
-    'pickup lines',
-    'chat analysis',
-    'conversation help',
-    'dating app messages',
-    'tone selector',
-    'text analysis',
+    'baby generator',
+    'ai baby photo',
+    'parent photo upload',
+    'baby portrait',
+    'influence slider',
+    'baby room gallery',
+    'inherited features',
+    'family app',
+    'ai portrait',
     'BabyGenerator',
   ],
   authors: [{ name: site.company.name, url: 'https://h2adigital.com' }],
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: env.SITE_URL,
     title: `${site.app.name} - ${site.app.tagline}`,
-    description: 'Upload a dating chat or profile and get AI-powered reply suggestions in seconds.',
+    description: 'Generate a baby portrait from two parent photos and save it to your Baby Room.',
     siteName: site.app.name,
     images: [
       {
-        url: '/og.png',
-        width: 1200,
-        height: 630,
-        alt: `${site.app.name} - AI Dating Assistant`,
+        url: '/images/icon.png',
+        width: 512,
+        height: 512,
+        alt: `${site.app.name} app icon`,
         type: 'image/png',
       },
     ],
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     site: '@babygenerator',
     creator: '@hakim98bologna',
     title: `${site.app.name} - ${site.app.tagline}`,
-    description: 'Get confident, on-brand dating replies with ChatWing.',
-    images: ['/og.png'],
+    description: 'Create a realistic baby portrait from two parent photos in seconds.',
+    images: ['/images/icon.png'],
   },
   robots: {
     index: true,
@@ -89,7 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${fredoka.className} antialiased`}>
+      <body className={`${manrope.className} antialiased`}>
         {children}
         <AnalyticsHost />
         <Toast />

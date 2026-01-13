@@ -1,19 +1,19 @@
 export const faq = [
   {
     q: 'What does BabyGenerator cost?',
-    a: 'BabyGenerator offers a weekly subscription for $6.99 with a free trial, or an annual plan for $79.99.',
+    a: 'Pricing varies by plan and is shown in the app before you start a generation.',
   },
   {
-    q: 'How do I submit a chat or profile?',
-    a: 'Upload a screenshot or paste the text directly into the app.',
+    q: 'What kind of photos work best?',
+    a: 'Clear, front-facing photos in good light produce the most accurate results.',
   },
   {
-    q: 'Does BabyGenerator save my screenshots?',
-    a: 'No. Screenshots are processed temporarily to generate suggestions and are deleted immediately after.',
+    q: 'Do you store my parent photos?',
+    a: 'Photos are processed temporarily to generate your result and saved only with your Baby Room history.',
   },
   {
-    q: 'Can I choose different tones?',
-    a: 'Yes. Pick funny, confident, sweet, or direct responses.',
+    q: 'Can I choose a gender?',
+    a: 'Yes. Select “surprise me,” “boy,” or “girl” before generating.',
   },
   { q: 'How do I get support?', a: 'Write to support@h2adigital.com.' },
 ];

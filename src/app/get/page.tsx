@@ -58,10 +58,10 @@ export default function DownloadPage() {
   // --- MOBILE FALLBACK ---
   if (isMobile && showFallback) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-b from-gray-50 to-white px-4 py-24 sm:px-6 lg:px-8">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#F5F5F7] px-4 py-24 sm:px-6 lg:px-8">
         <div className="w-full max-w-md">
           <div className="mb-8 flex justify-center">
-            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-linear-to-br from-violet-500 to-indigo-500 shadow-lg">
+            <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-black shadow-lg">
               <Image
                 src={'/images/icon.png'}
                 alt={`${site.app.name} logo`}
@@ -71,10 +71,10 @@ export default function DownloadPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border-2 border-gray-200 bg-white p-8 text-center shadow-xl">
+          <div className="rounded-2xl border border-[#E5E5E7] bg-white p-8 text-center shadow-xl">
             <h1 className="mb-3 text-2xl font-bold text-gray-900">Download {site.app.name}</h1>
             <p className="mb-8 text-base text-gray-600">
-              Couldn't open the store automatically. Choose your platform below.
+              Couldn&apos;t open the store automatically. Choose your platform below.
             </p>
 
             <div className="flex justify-center">
@@ -84,9 +84,9 @@ export default function DownloadPage() {
             {/* Features List */}
             <div className="mt-12 grid gap-4 text-left sm:grid-cols-3">
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -95,20 +95,20 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                      d="M4 6h16M4 12h16M4 18h16M8 4v4M16 10v4M10 16v4"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Context-Aware</h3>
-                  <p className="text-sm text-gray-600">Replies that fit the moment</p>
+                  <h3 className="font-semibold text-gray-900">Influence Slider</h3>
+                  <p className="text-sm text-gray-600">Tune Parent A vs Parent B</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -117,20 +117,20 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      d="M12 3v3m0 12v3m-3-3h6M9 6h6m-4 6h2m-7 0a7 7 0 1114 0 7 7 0 01-14 0z"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Tone Controls</h3>
-                  <p className="text-sm text-gray-600">Confident, playful, or flirty</p>
+                  <h3 className="font-semibold text-gray-900">Gender Choice</h3>
+                  <p className="text-sm text-gray-600">Surprise, boy, or girl</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -139,13 +139,13 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm4 6l2-2 3 3 4-4 2 2"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Screenshot + Text</h3>
-                  <p className="text-sm text-gray-600">Upload or paste instantly</p>
+                  <h3 className="font-semibold text-gray-900">Baby Room</h3>
+                  <p className="text-sm text-gray-600">Save and revisit results</p>
                 </div>
               </div>
             </div>
@@ -158,10 +158,10 @@ export default function DownloadPage() {
   // --- DESKTOP VIEW ---
   if (!isMobile) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-b from-violet-50 via-white to-indigo-50 px-4 py-24">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#F5F5F7] px-4 py-24">
         <div className="w-full max-w-3xl">
           <div className="mb-8 flex justify-center">
-            <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-linear-to-br from-violet-500 to-indigo-500 shadow-lg">
+            <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-black shadow-lg">
               <Image
                 src={'/images/icon.png'}
                 alt={`${site.app.name} logo`}
@@ -171,11 +171,13 @@ export default function DownloadPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border-2 border-gray-200 bg-white p-12 text-center shadow-xl">
+          <div className="rounded-2xl border border-[#E5E5E7] bg-white p-12 text-center shadow-xl">
             <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
               Download {site.app.name}
             </h1>
-            <p className="mb-8 text-lg text-gray-600">Get BabyGenerator on your mobile device</p>
+            <p className="mb-8 text-lg text-gray-600">
+              Generate a baby portrait from two parent photos.
+            </p>
 
             <div className="mb-8 flex justify-center">
               <AppStoreButtons />
@@ -184,9 +186,9 @@ export default function DownloadPage() {
             {/* Features List */}
             <div className="mt-12 grid gap-4 text-left sm:grid-cols-3">
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -195,20 +197,20 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                      d="M4 6h16M4 12h16M4 18h16M8 4v4M16 10v4M10 16v4"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Context-Aware</h3>
-                  <p className="text-sm text-gray-600">Replies that fit the moment</p>
+                  <h3 className="font-semibold text-gray-900">Influence Slider</h3>
+                  <p className="text-sm text-gray-600">Tune Parent A vs Parent B</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -217,20 +219,20 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      d="M12 3v3m0 12v3m-3-3h6M9 6h6m-4 6h2m-7 0a7 7 0 1114 0 7 7 0 01-14 0z"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Tone Controls</h3>
-                  <p className="text-sm text-gray-600">Confident, playful, or flirty</p>
+                  <h3 className="font-semibold text-gray-900">Gender Choice</h3>
+                  <p className="text-sm text-gray-600">Surprise, boy, or girl</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-violet-500/10">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black/5">
                   <svg
-                    className="h-5 w-5 text-violet-500"
+                    className="h-5 w-5 text-black"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -239,13 +241,13 @@ export default function DownloadPage() {
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm4 6l2-2 3 3 4-4 2 2"
                     />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Screenshot + Text</h3>
-                  <p className="text-sm text-gray-600">Upload or paste instantly</p>
+                  <h3 className="font-semibold text-gray-900">Baby Room</h3>
+                  <p className="text-sm text-gray-600">Save and revisit results</p>
                 </div>
               </div>
             </div>
@@ -257,10 +259,10 @@ export default function DownloadPage() {
 
   // --- MOBILE LOADING STATE (attempting redirect) ---
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-b from-gray-50 to-white">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-[#F5F5F7]">
       <div className="text-center">
         <div className="mb-6 flex justify-center">
-          <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-linear-to-br from-violet-500 to-indigo-500 shadow-lg">
+          <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-black shadow-lg">
             <svg
               className="h-10 w-10 animate-pulse text-white"
               fill="none"
@@ -277,7 +279,7 @@ export default function DownloadPage() {
           </div>
         </div>
 
-        <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-violet-500"></div>
+        <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-black"></div>
         <p className="text-lg font-semibold text-gray-900">Opening store...</p>
         <p className="mt-2 text-sm text-gray-500">Please wait</p>
       </div>

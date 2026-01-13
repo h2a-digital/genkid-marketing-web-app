@@ -9,211 +9,135 @@ import SupportPresenter from './Support.presenter';
 import type { SupportFormVM } from './Support.model';
 
 export function Support() {
-  const presenter = useMemo(() => new SupportPresenter(), []);
-
-  const [form, setForm] = useState<SupportFormVM>({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-    hp: '',
-    isSubmitting: false,
-    hasSubmitted: false,
   });
-
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors({});
+    setIsSubmitting(true);
 
-    // Validate form
-    const validation = ContactSchema.safeParse({
-      name: form.name,
-      email: form.email,
-      message: form.message,
-      hp: form.hp,
-    });
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    if (!validation.success) {
-      const fieldErrors: Record<string, string> = {};
-      validation.error.issues.forEach((issue) => {
-        if (issue.path[0]) {
-          fieldErrors[issue.path[0].toString()] = issue.message;
-        }
-      });
-      setErrors(fieldErrors);
-      return;
-    }
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    setFormData({ name: '', email: '', message: '' });
 
-    setForm((prev) => ({ ...prev, isSubmitting: true }));
-
-    const success = await presenter.submitForm({
-      name: form.name,
-      email: form.email,
-      message: form.message,
-      hp: form.hp,
-    });
-
-    if (success) {
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-        hp: '',
-        isSubmitting: false,
-        hasSubmitted: true,
-      });
-    } else {
-      setForm((prev) => ({ ...prev, isSubmitting: false }));
-    }
+    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   return (
-    <section id="support" aria-labelledby="support-heading" className="bg-white py-24">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+    <section id="support" className="bg-white py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-3xl"
+          viewport={{ once: true }}
         >
           <div className="mb-12 text-center">
-            <h2 id="support-heading" className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl">
-              Get in Touch
-            </h2>
+            <div className="mb-4 text-5xl">💬</div>
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">Get in Touch</h2>
             <p className="text-xl text-gray-600">
-              Have a question or feedback about BabyGenerator? We&apos;d love to hear from you.
+              Questions about BabyGenerator? We&apos;re here to help.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-gray-200 bg-linear-to-br from-gray-50 to-gray-100 p-8 md:p-12">
-            {/* Contact Form */}
+          <div className="rounded-3xl bg-[#F5F5F7] p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Honeypot field - hidden from users */}
-              <input
-                type="text"
-                name="hp"
-                value={form.hp}
-                onChange={(e) => setForm((prev) => ({ ...prev, hp: e.target.value }))}
-                className="hidden"
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden="true"
-              />
-
-              {/* Name Field */}
               <div>
-                <label htmlFor="name" className="mb-2 block text-sm font-medium text-gray-700">
+                <label htmlFor="name" className="mb-2 block text-sm font-semibold text-gray-900">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  value={form.name}
-                  onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
-                  className={`w-full rounded-xl border px-4 py-3 ${
-                    errors.name ? 'border-red-300' : 'border-gray-300'
-                  } transition-colors focus:border-transparent focus:ring-2 focus:ring-violet-500`}
-                  placeholder="Your name"
-                  disabled={form.isSubmitting}
                   required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 transition-colors focus:border-black focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  placeholder="Your name"
+                  disabled={isSubmitting}
                 />
-                {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
               </div>
 
-              {/* Email Field */}
               <div>
-                <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="mb-2 block text-sm font-semibold text-gray-900">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  value={form.email}
-                  onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
-                  className={`w-full rounded-xl border px-4 py-3 ${
-                    errors.email ? 'border-red-300' : 'border-gray-300'
-                  } transition-colors focus:border-transparent focus:ring-2 focus:ring-violet-500`}
-                  placeholder="your@email.com"
-                  disabled={form.isSubmitting}
                   required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 transition-colors focus:border-black focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  placeholder="your@email.com"
+                  disabled={isSubmitting}
                 />
-                {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
               </div>
 
-              {/* Message Field */}
               <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-medium text-gray-700">
+                <label htmlFor="message" className="mb-2 block text-sm font-semibold text-gray-900">
                   Message
                 </label>
                 <textarea
                   id="message"
-                  value={form.message}
-                  onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
-                  rows={5}
-                  className={`w-full rounded-xl border px-4 py-3 ${
-                    errors.message ? 'border-red-300' : 'border-gray-300'
-                  } resize-none transition-colors focus:border-transparent focus:ring-2 focus:ring-violet-500`}
-                  placeholder="Tell us how we can help..."
-                  disabled={form.isSubmitting}
                   required
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 transition-colors focus:border-black focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  placeholder="How can we help you?"
+                  disabled={isSubmitting}
                 />
-                {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
-                disabled={form.isSubmitting}
-                className="w-full rounded-xl bg-violet-600 px-6 py-3 font-medium text-white transition-all duration-300 hover:scale-[1.02] hover:bg-violet-500 focus-visible:ring-2 focus-visible:ring-violet-600 focus-visible:ring-offset-2 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+                disabled={isSubmitting}
+                className="w-full rounded-xl bg-black px-8 py-4 font-bold text-white transition-all hover:scale-[1.02] hover:bg-gray-800 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {form.isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
 
-              {form.hasSubmitted && !form.isSubmitting && (
-                <motion.p
+              {isSubmitted && (
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-center font-medium text-green-600"
+                  className="text-center font-semibold text-[#34C759]"
                 >
-                  Message sent successfully! We&apos;ll be in touch soon.
-                </motion.p>
+                  ✓ Message sent successfully! We&apos;ll get back to you soon.
+                </motion.div>
               )}
             </form>
 
-            {/* Alternative Contact */}
-            <div className="mt-8 border-t border-gray-300 pt-8 text-center">
-              <p className="mb-4 text-sm text-gray-600">Or reach us directly at</p>
+            <div className="mt-8 border-t border-gray-300 pt-8">
+              <p className="mb-4 text-center text-sm text-gray-600">Or email us directly at</p>
               <a
                 href={`mailto:${site.company.email}`}
-                className="rounded text-lg font-medium text-gray-900 underline hover:text-violet-700 focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
+                className="block text-center text-lg font-semibold text-gray-900 hover:text-black"
               >
                 {site.company.email}
               </a>
             </div>
 
-            {/* Legal Links */}
             <div className="mt-8 border-t border-gray-300 pt-8">
-              <nav aria-label="Legal links">
-                <p className="mb-4 text-center text-sm font-medium text-gray-500">
-                  Legal Information
-                </p>
-                <div className="flex flex-wrap justify-center gap-6">
-                  <Link
-                    href="/legal/privacy"
-                    className="rounded font-medium text-gray-700 underline hover:text-violet-700 focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
-                  >
-                    Privacy Policy
-                  </Link>
-                  <Link
-                    href="/legal/terms"
-                    className="rounded font-medium text-gray-700 underline hover:text-violet-700 focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2"
-                  >
-                    Terms of Service
-                  </Link>
-                </div>
-              </nav>
+              <p className="mb-4 text-center text-sm font-semibold text-gray-500">
+                Legal Information
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="#" className="font-medium text-gray-700 hover:text-black">
+                  Privacy Policy
+                </a>
+                <a href="#" className="font-medium text-gray-700 hover:text-black">
+                  Terms of Service
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>

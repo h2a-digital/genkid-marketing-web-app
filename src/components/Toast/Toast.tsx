@@ -81,9 +81,9 @@ function getToastStyles(kind: ToastKind) {
     case 'success':
       return {
         bg: 'bg-white',
-        border: 'border-green-200',
-        iconBg: 'bg-green-100',
-        iconColor: 'text-green-600',
+        border: 'border-[#E5E5E7]',
+        iconBg: 'bg-[#E8F8EE]',
+        iconColor: 'text-[#34C759]',
         titleColor: 'text-gray-900',
         descColor: 'text-gray-600',
       };
@@ -99,8 +99,8 @@ function getToastStyles(kind: ToastKind) {
     case 'warning':
       return {
         bg: 'bg-white',
-        border: 'border-orange-200',
-        iconBg: 'bg-orange-100',
+        border: 'border-[#E5E5E7]',
+        iconBg: 'bg-black/5',
         iconColor: 'text-orange-600',
         titleColor: 'text-gray-900',
         descColor: 'text-gray-600',
@@ -108,9 +108,9 @@ function getToastStyles(kind: ToastKind) {
     default: // info
       return {
         bg: 'bg-white',
-        border: 'border-blue-200',
-        iconBg: 'bg-blue-100',
-        iconColor: 'text-blue-600',
+        border: 'border-[#E5E5E7]',
+        iconBg: 'bg-black/5',
+        iconColor: 'text-gray-900',
         titleColor: 'text-gray-900',
         descColor: 'text-gray-600',
       };

@@ -1,26 +1,26 @@
 export const how = [
   {
-    id: 'upload',
-    step: 1,
-    title: 'Upload or Paste',
-    body: 'Drop a screenshot or paste your chat or bio to get started',
+    number: 1,
+    title: 'Upload Photos',
+    description:
+      'Add clear, front-facing photos of both parents. The better the photos, the better your results.',
   },
   {
-    id: 'analyze',
-    step: 2,
-    title: 'AI Reads the Room',
-    body: 'ChatWing analyzes context, intent, and vibe for the best next move',
+    number: 2,
+    title: 'Adjust Settings',
+    description:
+      "Set parent influence levels and choose the baby's gender. Experiment with different combinations.",
   },
   {
-    id: 'tone',
-    step: 3,
-    title: 'Choose Your Tone',
-    body: 'Select confident, playful, respectful, or flirty styles',
+    number: 3,
+    title: 'Generate Portrait',
+    description:
+      'Our AI creates a realistic baby portrait in seconds, blending features from both parents naturally.',
   },
   {
-    id: 'send',
-    step: 4,
-    title: 'Send Confidently',
-    body: 'Use a reply, edit it to fit, and keep the conversation moving',
+    number: 4,
+    title: 'Save & Share',
+    description:
+      'Store unlimited portraits in your Baby Room. Download, share with family, or generate variations.',
   },
 ];

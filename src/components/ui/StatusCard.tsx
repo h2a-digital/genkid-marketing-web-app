@@ -26,7 +26,7 @@ export function StatusCard({ status, title, message, children }: StatusCardProps
     ),
     success: (
       <svg
-        className="h-12 w-12 text-green-500"
+        className="h-12 w-12 text-[#34C759]"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

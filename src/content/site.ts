@@ -1,5 +1,5 @@
 export const site = {
-  app: { name: 'BabyGenerator', tagline: 'The AI wingman for better dating conversations.' },
+  app: { name: 'BabyLens', tagline: 'Generate a baby portrait from two parent photos.' },
   // Company name shown without the 'LLC' suffix per preference
   company: { name: 'H2A Digital', email: 'support@h2adigital.com' },
   store: {

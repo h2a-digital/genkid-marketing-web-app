@@ -3,11 +3,11 @@ export const founder = {
   title: 'Founder',
   portrait: '/images/profile-photo.jpg',
   intro:
-    "Hey 👋 I'm Hakim. I built ChatWing because too many good conversations stall for the wrong reasons.",
+    'Hey 👋 I am Hakim, the builder behind BabyGenerator.',
   paragraphs: [
-    'I watched friends overthink the perfect reply or second-guess their tone. The right message was in their head, but it never came out the way they meant.',
-    'ChatWing started as a simple idea: what if your chats had a calm, smart co-pilot that could read the room and suggest better words?',
-    'Whether you need a playful opener, a confident follow-up, or a respectful response, I want ChatWing to help you show up as your best self.',
+    'The idea came from couples who wanted a tasteful, realistic way to imagine their future family without gimmicks.',
+    'We built BabyGenerator to keep the process simple: upload two parent photos, tune influence, pick a gender, and generate a portrait you can save.',
+    'Every result lives in your Baby Room with a short summary and inherited-feature highlights so the story feels personal.',
   ],
   ps: 'If you have ideas or feedback, I read every message at support@h2adigital.com.',
   links: {

@@ -6,26 +6,21 @@ export const gallery = [
   },
   {
     id: 2,
-    alt: 'Upload a screenshot to get suggestions',
-    src: '/screenshots/upload_screenshot.PNG',
+    alt: 'Upload Parent A and Parent B photos',
+    src: '/screenshots/generating_step1.PNG',
   },
   {
     id: 3,
-    alt: 'AI analysis of a dating chat screenshot',
-    src: '/screenshots/analysis_screenshot.PNG',
+    alt: 'Influence slider for balancing parent traits and gender selection with surprise, boy, or girl options',
+    src: '/screenshots/generating_step3.PNG',
   },
   {
     id: 4,
-    alt: 'Paste text for instant reply ideas',
-    src: '/screenshots/input_text.PNG',
+    alt: 'Baby Room gallery of saved generations',
+    src: '/screenshots/babyroom.PNG',
   },
   {
     id: 5,
-    alt: 'Reply suggestions with selectable tones',
-    src: '/screenshots/analysis_text.PNG',
-  },
-  {
-    id: 6,
     alt: 'Dark mode for late-night chats',
     src: '/screenshots/dark.PNG',
   },

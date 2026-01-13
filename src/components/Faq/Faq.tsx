@@ -27,7 +27,7 @@ export function Faq() {
       className="relative overflow-hidden bg-white py-24"
     >
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-50/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F5F5F7] to-transparent" />
 
       <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -37,12 +37,12 @@ export function Faq() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <div className="mb-4 text-5xl">🤔</div>
+          <div className="mb-4 text-5xl">❓</div>
           <h2 id="faq-heading" className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
-            Got Questions?
+            Questions, Answered
           </h2>
           <p className="mx-auto max-w-2xl text-xl font-medium text-gray-600">
-            We've got answers (and they're good ones) 😉
+            Everything you need to know before you generate.
           </p>
         </motion.div>
 
@@ -60,22 +60,22 @@ export function Faq() {
                 <div
                   className={`overflow-hidden rounded-3xl border-2 transition-all duration-300 ${
                     isOpen
-                      ? 'border-purple-400 bg-gradient-to-br from-purple-50 to-pink-50 shadow-lg'
-                      : 'border-gray-200 bg-white hover:border-purple-200 hover:shadow-md'
+                      ? 'border-black/20 bg-[#F5F5F7] shadow-lg'
+                      : 'border-[#E5E5E7] bg-white hover:border-black/20 hover:shadow-md'
                   }`}
                 >
                   <button
                     onClick={() => toggleFaq(index)}
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
-                    className="flex w-full items-start justify-between gap-4 px-6 py-5 text-left focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 md:px-8 md:py-6"
+                    className="flex w-full items-start justify-between gap-4 px-6 py-5 text-left focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 md:px-8 md:py-6"
                   >
                     <span className="flex-1 text-lg font-bold text-gray-900 md:text-xl">
                       {item.q}
                     </span>
                     <div
                       className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                        isOpen ? 'rotate-180 bg-purple-500' : 'bg-gray-200'
+                        isOpen ? 'rotate-180 bg-black' : 'bg-[#E5E5E7]'
                       }`}
                     >
                       <svg
@@ -121,7 +121,7 @@ export function Faq() {
           <p className="mb-4 text-lg text-gray-600">Still have questions?</p>
           <a
             href="#support"
-            className="inline-flex items-center gap-2 rounded-full bg-purple-600 px-8 py-4 font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-purple-500 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 active:scale-95"
+            className="inline-flex items-center gap-2 rounded-full bg-black px-8 py-4 font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-gray-900 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2 active:scale-95"
           >
             Get in Touch
             <span>→</span>

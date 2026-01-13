@@ -1,22 +1,32 @@
 export const features = [
   {
-    icon: 'upload',
-    title: 'Screenshot or Paste',
-    body: 'Upload a screenshot of a chat or profile, or paste the text directly',
+    icon: '📸',
+    title: 'Easy Photo Upload',
+    description:
+      'Simply upload clear photos of both parents. Our AI works best with front-facing portraits with good lighting.',
   },
   {
-    icon: 'context',
-    title: 'Context-Aware Analysis',
-    body: 'ChatWing understands tone, intent, and conversation momentum before suggesting replies',
+    icon: '⚖️',
+    title: 'Adjustable Influence',
+    description:
+      "Fine-tune which parent's features are more prominent. Slide to find the perfect blend of both parents.",
   },
   {
-    icon: 'tone',
-    title: 'Tone Controls',
-    body: 'Pick confident, playful, respectful, or flirty responses that sound like you',
+    icon: '👶',
+    title: 'Gender Selection',
+    description:
+      'Choose to generate a baby boy, baby girl, or let our AI surprise you with the most likely outcome.',
   },
   {
-    icon: 'reply',
-    title: 'Ready-to-Send Lines',
-    body: 'Get polished replies and pickup lines you can edit and send instantly',
+    icon: '🖼️',
+    title: 'Baby Room Gallery',
+    description:
+      'Save all your generated portraits in a private gallery. Download, share, or regenerate anytime you want.',
+  },
+  {
+    icon: '⚡',
+    title: 'Lightning Fast',
+    description:
+      'Get your baby portrait in under 30 seconds. No waiting, no complex setup—just instant results.',
   },
 ];
