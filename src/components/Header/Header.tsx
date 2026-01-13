@@ -59,7 +59,9 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 shadow-sm backdrop-blur-md' : 'bg-transparent'
+        isScrolled || isMobileMenuOpen
+          ? 'bg-white/95 shadow-sm backdrop-blur-md'
+          : 'bg-transparent'
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -130,7 +132,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="border-t border-gray-200 py-4 lg:hidden">
+          <nav className="-mx-4 border-t border-gray-200 bg-white/95 px-4 py-4 shadow-md backdrop-blur-md sm:-mx-6 sm:px-6 lg:hidden">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a

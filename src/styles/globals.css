@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Override font-bold to use 600 instead of 700 */
 .font-bold {
   font-weight: 600 !important;
