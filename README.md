@@ -1,6 +1,6 @@
-# BabyLens Marketing Website
+# GenKid Marketing Website
 
-> A modern, responsive marketing website for the BabyLens AI baby photo app.
+> A modern, responsive marketing website for the GenKid AI baby photo app.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)
@@ -20,9 +20,9 @@
 
 ## 🎯 Overview
 
-BabyLens Marketing Website is a high-performance, SEO-optimized marketing site built with Next.js 16 and the App Router. It showcases the BabyLens mobile app - an AI-powered experience that generates a realistic baby portrait from two parent photos.
+GenKid Marketing Website is a high-performance, SEO-optimized marketing site built with Next.js 16 and the App Router. It showcases the GenKid mobile app - an AI-powered experience that generates a realistic baby portrait from two parent photos.
 
-**Live Site:** [https://babylens.h2adigital.com](https://babylens.h2adigital.com)
+**Live Site:** [https://genkid.h2adigital.com](https://genkid.h2adigital.com)
 
 ## ✨ Features
 
@@ -72,7 +72,7 @@ BabyLens Marketing Website is a high-performance, SEO-optimized marketing site b
 ## 📁 Project Structure
 
 ```
-babygenerator-marketing-web-app/
+genkid-marketing-web-app/
 ├── public/                      # Static assets
 │   ├── screenshots/             # App screenshots (upload, influence, Baby Room)
 │   ├── site.webmanifest         # PWA manifest
@@ -120,7 +120,7 @@ babygenerator-marketing-web-app/
 
    ```bash
    git clone <repository-url>
-   cd babygenerator-marketing-web-app
+   cd genkid-marketing-web-app
    ```
 
 2. **Install dependencies**
@@ -152,7 +152,7 @@ Create a `.env.local` file with these variables:
 
 ```env
 # Site Configuration
-NEXT_PUBLIC_SITE_URL=https://babylens.h2adigital.com
+NEXT_PUBLIC_SITE_URL=https://genkid.h2adigital.com
 
 # PostHog Analytics
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_key
@@ -231,5 +231,5 @@ All event names use the `EVT` constants for type safety.
 ## 📞 Support
 
 - **Email**: support@h2adigital.com
-- **Website**: [https://babygenerator.h2adigital.com](https://babygenerator.h2adigital.com)
+- **Website**: [https://genkid.h2adigital.com](https://genkid.h2adigital.com)
 - **Company**: H2A Digital LLC

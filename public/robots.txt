@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://babygenerator.h2adigital.com
+Host: https://genkid.h2adigital.com
 
 # Sitemaps
-Sitemap: https://babygenerator.h2adigital.com/sitemap.xml
+Sitemap: https://genkid.h2adigital.com/sitemap.xml

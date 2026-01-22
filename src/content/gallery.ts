@@ -1,7 +1,7 @@
 export const gallery = [
   {
     id: 1,
-    alt: 'BabyGenerator home screen overview',
+    alt: 'GenKid home screen overview',
     src: '/screenshots/home.PNG',
   },
   {

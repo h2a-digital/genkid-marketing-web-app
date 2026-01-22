@@ -1,6 +1,6 @@
 export const faq = [
   {
-    q: 'What does BabyGenerator cost?',
+    q: 'What does GenKid cost?',
     a: 'Pricing varies by plan and is shown in the app before you start a generation.',
   },
   {

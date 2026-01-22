@@ -15,7 +15,7 @@ export const testimonials = [
   },
   {
     quote:
-      'Privacy was my biggest concern, but BabyGenerator handles everything securely. The results are stunning and the process is so easy.',
+      'Privacy was my biggest concern, but GenKid handles everything securely. The results are stunning and the process is so easy.',
     name: 'David & Emma',
     role: 'Happy users',
     rating: 5,

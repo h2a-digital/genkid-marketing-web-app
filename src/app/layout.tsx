@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'inherited features',
     'family app',
     'ai portrait',
-    'BabyGenerator',
+    'GenKid',
   ],
   authors: [{ name: site.company.name, url: 'https://h2adigital.com' }],
   creator: site.company.name,
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@babygenerator',
+    site: '@genkid',
     creator: '@hakim98bologna',
     title: `${site.app.name} - ${site.app.tagline}`,
     description: 'Create a realistic baby portrait from two parent photos in seconds.',

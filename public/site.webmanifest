@@ -1,6 +1,6 @@
 {
-  "name": "BabyGenerator",
-  "short_name": "BabyGenerator",
+  "name": "GenKid",
+  "short_name": "GenKid",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#F5F5F7",
+  "theme_color": "#583E00",
+  "background_color": "#583E00",
   "display": "standalone"
 }

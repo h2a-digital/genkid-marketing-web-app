@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://babygenerator.h2adigital.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://genkid.h2adigital.com';
 
 module.exports = {
   siteUrl: SITE_URL,

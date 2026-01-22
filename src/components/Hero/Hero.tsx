@@ -100,7 +100,7 @@ export function Hero() {
                 <div className="aspect-[9/19] overflow-hidden rounded-[2.5rem] bg-white">
                   <Image
                     src="/screenshots/home.PNG"
-                    alt="BabyGenerator app preview with a generated baby portrait"
+                    alt="GenKid app preview with a generated baby portrait"
                     width={360}
                     height={760}
                     className="h-full w-full object-cover"

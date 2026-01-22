@@ -43,7 +43,7 @@ export function Support() {
             <div className="mb-4 text-5xl">💬</div>
             <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">Get in Touch</h2>
             <p className="text-xl text-gray-600">
-              Questions about BabyGenerator? We&apos;re here to help.
+              Questions about GenKid? We&apos;re here to help.
             </p>
           </div>
 

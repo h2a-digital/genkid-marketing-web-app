@@ -19,7 +19,7 @@ export default class AnalyticsService implements AnalyticsServicePort {
       capture_pageleave: true,
     });
 
-    const systemProperties = { site: 'babygenerator-marketing' };
+    const systemProperties = { site: 'genkid-marketing' };
 
     posthog.register(systemProperties);
 
