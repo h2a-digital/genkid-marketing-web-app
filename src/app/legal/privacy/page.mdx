@@ -3,7 +3,7 @@
 # Privacy Policy
 
 <div className="bg-[#F5F5F7] border-l-4 border-black p-6 rounded-r-lg">
-  <div className="text-sm font-medium text-gray-900">Effective Date: January 21, 2026</div>
+  <div className="text-sm font-medium text-gray-900">Effective Date: January 29, 2026</div>
   <div className="mt-2 text-gray-700">
     **H2A Digital** ("we," "us," or "our") operates the GenKid mobile application (the "App").
     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our App.
@@ -67,6 +67,66 @@
 
     <div>
       <strong>Where it is stored:</strong> Uploaded photos are stored temporarily in our backend on Supabase Storage to perform the generation request.
+    </div>
+  </div>
+</div>
+
+
+<h2>🧩 Third-Party Face Data Storage (Service Providers)</h2>
+
+<div className="bg-white border border-[#E5E5E7] rounded-xl p-6">
+  <div className="text-gray-700 space-y-4">
+    <div>
+      <div className="font-semibold text-gray-900">Supabase (Backend & Storage)</div>
+
+      <div className="mt-2">
+        <strong>Do they store face data?</strong> Yes. Supabase temporarily stores:
+        (1) uploaded parent photos (which may contain faces) in Supabase Storage under our account,
+        and (2) temporary generated baby images produced during processing.
+      </div>
+
+      <div className="mt-2">
+        <strong>Why do they store it?</strong> We upload parent photos to create a short-lived signed
+        URL that our backend uses to securely retrieve the image during processing. This avoids sending
+        large image files inside the generation request payload and improves reliability (e.g., if the
+        app is backgrounded or a retry is needed). Temporary generated images may be stored briefly to
+        deliver results to the user for download.
+      </div>
+
+      <div className="mt-2">
+        <strong>How long is it stored?</strong>
+        <ul className="list-disc pl-5 mt-2 space-y-1">
+          <li>
+            <strong>Parent photos:</strong> We delete uploaded parent photos after the generation attempt
+            completes. If deletion fails due to network or unexpected errors, we run automated cleanup to
+            remove any remaining parent uploads within <strong>6 hours</strong>.
+          </li>
+          <li>
+            <strong>Temporary generated images:</strong> We remove temporary generated baby images after
+            processing and download. If deletion fails due to network or unexpected errors, we run automated
+            cleanup to remove any remaining temporary results within <strong>48 hours</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <div className="mt-2">
+        <strong>Why these lengths?</strong> The <strong>6-hour</strong> and <strong>48-hour</strong> windows
+        exist only as short reliability fallbacks (e.g., client disconnects, network errors, or retries) while
+        minimizing retention of face photos and generated images.
+      </div>
+    </div>
+
+    <div>
+      <div className="font-semibold text-gray-900">PostHog (Analytics)</div>
+
+      <div className="mt-2">
+        <strong>Do they store face data?</strong> No. We do not send uploaded photos or generated images to PostHog.
+      </div>
+
+      <div className="mt-2">
+        <strong>What do they store instead?</strong> PostHog receives usage/analytics events (e.g., screen views,
+        button taps, feature usage) to help us improve the App.
+      </div>
     </div>
   </div>
 </div>
