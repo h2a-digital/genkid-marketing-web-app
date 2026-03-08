@@ -20,12 +20,23 @@ export const gallery = [
     src: '/screenshots/generating_step3.PNG',
   },
   {
-    id: 5,
-    alt: 'Baby Room gallery of saved generations',
-    src: '/screenshots/babyroom.PNG',
+    id: 6,
+    alt: 'Looks-like estimator showing what percentage a baby resembles each parent',
+    src: '/screenshots/looks_like.PNG',
   },
   {
-    id: 6,
+    id: 7,
+    alt: "Age guess tool estimating a person's age from their photo",
+    src: '/screenshots/age_guess.PNG',
+  },
+  {
+    id: 5,
+    alt: 'Baby Room gallery of saved generations',
+    src: '/screenshots/babyroom.png',
+  },
+
+  {
+    id: 8,
     alt: 'Dark mode for late-night chats',
     src: '/screenshots/dark.PNG',
   },

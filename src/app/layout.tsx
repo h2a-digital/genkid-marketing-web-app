@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.app.name}`,
   },
   description:
-    'Upload two parent photos, set influence and gender, and generate a realistic baby portrait saved to your Baby Room.',
+    'Upload two parent photos, set influence, gender, and baby age, then generate a realistic baby portrait saved to your Baby Room.',
   keywords: [
     'baby generator',
     'ai baby photo',
@@ -39,7 +39,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: env.SITE_URL,
     title: `${site.app.name} - ${site.app.tagline}`,
-    description: 'Generate a baby portrait from two parent photos and save it to your Baby Room.',
+    description:
+      'Generate a baby portrait from two parent photos, choose baby age, and explore looks-like and age-guess tools.',
     siteName: site.app.name,
     images: [
       {
@@ -56,7 +57,8 @@ export const metadata: Metadata = {
     site: '@genkid',
     creator: '@hakim98bologna',
     title: `${site.app.name} - ${site.app.tagline}`,
-    description: 'Create a realistic baby portrait from two parent photos in seconds.',
+    description:
+      'Create a realistic baby portrait from two parent photos, choose baby age, and try looks-like and age-guess tools.',
     images: ['/images/icon.png'],
   },
   robots: {

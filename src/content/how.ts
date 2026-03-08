@@ -9,7 +9,7 @@ export const how = [
     number: 2,
     title: 'Adjust Settings',
     description:
-      "Set parent influence levels and choose the baby's gender. Experiment with different combinations.",
+      "Set parent influence levels, choose the baby's gender, and select the baby age before generation.",
   },
   {
     number: 3,

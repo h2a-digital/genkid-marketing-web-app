@@ -13,9 +13,21 @@ export const features = [
   },
   {
     icon: '👶',
-    title: 'Gender Selection',
+    title: 'Gender & Age Selection',
     description:
-      'Choose to generate a baby boy, baby girl, or let our AI surprise you with the most likely outcome.',
+      "Choose the baby's gender, select the baby age before generation, or let our AI surprise you with the most likely outcome.",
+  },
+  {
+    icon: '🧬',
+    title: 'Looks-Like Estimator',
+    description:
+      'Estimate what percentage a baby looks like each parent with a simple side-by-side resemblance breakdown.',
+  },
+  {
+    icon: '🎂',
+    title: 'Age Guess',
+    description:
+      "Upload a photo and let GenKid estimate a person's age in seconds.",
   },
   {
     icon: '🖼️',
